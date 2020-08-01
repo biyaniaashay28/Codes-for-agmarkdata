@@ -1,0 +1,49 @@
+This is the read me file for using agmarknet_granular_data.py to download price and arrivals data form agmarknet websit.
+
+Pre-Requisites:
+Python (Anaconda Preferable)
+Pandas Library
+Path Library
+Active Internet Connection
+
+Installing Pandas Library:
+Open Anaconda Prompt
+enter the command: pip install pandas 
+and press enter
+The Pandas library should begin to download. If it is already installed, the Anaconda Prompt will tell you. 
+
+Installing the Path Library:
+The pathlib (Path Library) should be installed by default, but in case it is not, use the following command in Anaconda Prompt:
+       pip install pathlib
+
+Using the Program:
+Copy paste the file named agmarknet_granular_data.py in folder of your choice.
+1)Open Anadonda Prompt
+2)If the drive shown by prompt is not the one your file is saved in, enter [<drive name>:] (For Example: f:) and press Enter
+For example:
+if the prompt shows something like this:
+C:\Users\Aashay>
+But your file is in F:\ enter f: and press enter
+now copy the path to your folder where the file is pasted and enter the following command:
+cd <path to the folder containing our file>
+for Example:
+cd F:\IIT Bombay\Interns\IIM B\python\Data
+
+3) Enter the following command: 
+python agmarknet_granular_data.py 
+and press enter
+
+4) When asked for commodity name, Enter the commodity name, with correct spelling
+5) When asked for From date, enter from date in the dd-mm-yyyy format (for example 01-04-2015). The program uses 01-04-2015
+as default from date. To use this, press enter. 
+6) When asked for To Date, enter to date in the dd-mm-yyyy format (for example 31-03-2020). The program uses 31-03-2020
+as default to date. To use this, press enter.
+
+The data should begin to download. Two folders with the names Backup and Data in the specified folder will be created.
+Data folder will contain the final excel file. Backup folder will contain all the intermediate backups and backup of final 
+file, just in case. The program backs up the data after every 500 days to prevent loss of data. 
+
+If the code suddenly stops working, press ctrl+c to stop anaconda prompt from functioning. It will end the current session
+and any data that was downloaded in the session (that wasn't saved as excel file) will be lost. 
+
+ 
