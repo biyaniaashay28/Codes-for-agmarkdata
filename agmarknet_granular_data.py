@@ -16,9 +16,8 @@ month_dict = {'04':'Apr', '05':'May', '06':'Jun', '07':'Jul', '08':'Aug', '09':'
 commodity = input("Enter Commodity Name (Press Enter to use Default Maize):")
 if(len(commodity)<=2):
     commodity = 'Maize'
-commodity1 = commodity[0].upper()
-commodity1 = commodity1 + commodity[1:].lower()
-commodity = commodity1
+commodity = commodity.replace(' ', '+')
+commodity = commodity.replace('/', '%2f')
 
 from_date = input("Enter From Date (Press Enter to use the default date (01-04-2015))")
 if(len(from_date)==0):
@@ -68,5 +67,5 @@ master_df = master_df[master_df['State Name']!='-']
 master_df = master_df.reset_index(drop = True)
 
 master_df.to_excel(str(path_data/Path(file_name+'.xlsx')))
-print('File Saved as ' + file_name + 'at ' + os.getcwd())  
+print('File Saved as ' + file_name + ' at ' + os.getcwd())  
 master_df.to_pickle(str(path_backup/Path(file_name+'_backup.pkl')))
